@@ -1,0 +1,224 @@
+/* ========== Reset básico ========== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #111827;
+  line-height: 1.5;
+}
+
+/* ========== Layout centralizado ========== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ========== Header / Nav ========== */
+header {
+  background: #0d1b2a;
+  color: #fff;
+  padding: 24px 0;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: center;  
+  align-items: center;     
+  text-align: center;       
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 22px;
+}
+.brand p {
+  margin: 4px 0 0;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+nav {
+  background: #1b263b;
+}
+
+.nav-wrap {
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: background .2s, color .2s, transform .2s;
+}
+
+/* Menu com efeito hover (obrigatório) */
+nav a:hover {
+  background: rgba(230, 57, 70, 0.18);
+  color: #ffb4bb;
+  transform: translateY(-1px);
+}
+
+nav a.active {
+  background: rgba(230, 57, 70, 0.28);
+}
+
+/* ========== Hero ========== */
+.hero {
+  background: linear-gradient(0deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+              url("https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=1400&q=60");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 56px 0;
+  justify-content: center; 
+}
+
+.hero .container {
+  text-align: center;
+}
+
+.hero h2 {
+  margin: 0 0 8px;
+  font-size: 36px;
+  justify-content: center; 
+}
+
+.hero p {
+  margin: 0;
+  opacity: 0.9;
+  justify-content: center; 
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+
+
+/* ========== Cards  ========== */
+.section {
+  padding: 36px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: #374151;
+}
+
+/* ========== Botões ========== */
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 800;
+  transition: transform .2s, filter .2s, background .2s;
+}
+
+.btn-primary {
+  background: #e63946;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c1121f;
+  transform: translateY(-1px);
+  filter: brightness(1.02);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.7);
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,.14);
+  transform: translateY(-1px);
+}
+
+/* Botão WhatsApp */
+.btn-whatsapp {
+  background: #25D366;
+  color: #fff;
+}
+.btn-whatsapp:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+
+/* ========== Formulário ========== */
+.form {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(15, 23, 42, 0.15);
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  border-color: rgba(230, 57, 70, 0.6);
+  box-shadow: 0 0 0 4px rgba(230,57,70,.12);
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #0d1b2a;
+  color: #fff;
+  padding: 16px 0;
+  text-align: center;
+  margin-top: 18px;
+  opacity: 0.95;
+}
+
+/* ========== Responsivo ========== */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h2 { font-size: 30px; }
+}
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; } /* empilha os cards */
+  .hero { padding: 42px 0; }
+  .hero h2 { font-size: 26px; }
+}
