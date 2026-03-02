@@ -25,10 +25,15 @@ O objetivo foi desenvolver:
 ## 🗂 Estrutura do Projeto
 
 📁 arena-futebol-store
+
 │── index.html
+
 │── sobre.html
+
 │── contato.html
+
 │── style.css
+
 │── README.md
 
 ---
